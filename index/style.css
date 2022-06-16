@@ -1,0 +1,17 @@
+h1 {
+border-bottom: 4mm ridge rgba(211, 220, 50, .6);
+}
+h2 {
+  
+}
+
+li {
+  list-style-type: none;
+}
+
+p.target {
+  border: thick double #32a1ce;
+}
+duv.zentai {
+  border: 4mm ridge rgba(211, 220, 50, .6);
+}
