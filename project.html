@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Project</title>
-    <script src="weather.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="project.js" defer></script>
   </head>
 
   <body>
     <h1>世界の天気予報</h1>
     <p><label for="kuni">検索したい国名</label>
-      <input type="text" name="kuni">
-      <button id="range">検索</button></p>
+      <input type="search" name="kuni">
+      <button id="sendRequest">検索</button></p>
+      <p><span id= "t"></span></p>
+      <p><span id= "f"></span></p>
+      <p><span id= "j"></span></p>
   </body>
 </html>
+
