@@ -1,12 +1,21 @@
-let b = document.querySelector('#sendRequest');
-b.addEventListener('click', sendRequest);
+let b = document.querySelector('#answer');
+b.addEventListener('click', printAnswer);
 
-function sendRequest() {
+function printAnswer() {
+	let id;
 	//検索キーを取得　5-1
-    let i = document.querySelector('input[name="kuni"]');
-    let id = i.value;       // ユーザが記入した文字列
+    let rs = document.querySelectorAll('input[name="kunimei"]');
+    for (let r of rs) {
+        if (r.checked) {        // r が選択されていたら
+            console.log(r.value);
+			
+        }
+    }
+        // ユーザが記入した文字列
+		id = rs.value;
 	// URL を設定
 	let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+ id +'.json';
+
 
 	// 通信開始
 	axios.get(url)
