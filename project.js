@@ -34,10 +34,8 @@ function showResult(resp) {
     let cc = document.querySelector('span#MAX');
     let dd = document.querySelector('span#MIN');
     console.log(data);
-    let p = document.createElement('p');
-    p.textContent = data.weather.description;
     aa.textContent = ("都市名 : " + data.name);
-    bb.textContent = ("天気 : " + data.weather.description);
+    bb.textContent = ("天気 : " + data.weather[0].description);
     cc.textContent = ("最高気温 : " + data.main.temp_max);
     dd.textContent = ("最低気温 : " + data.main.temp_min);
     
@@ -50,3 +48,5 @@ function showError(err) {
 function finish() {
 	console.log('通信が終わりました');
 }
+
+
