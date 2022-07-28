@@ -46,7 +46,15 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
+let p = document.createElement('p');
+    p.textContent = data.weather.description;
+
+    let d = document.createElement('div');
+    d.classList.add('faceAndName');
+    d.insertAdjacentElement('beforeend', p);
+
 
 console.log(data.name);
 console.log(data.main.temp_max);
 console.log(data.main.temp_min);
+console.log(p);

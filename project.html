@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <title>Project</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <link rel="stylesheet" href="project.css">
     <script src="project.js" defer></script>
   </head>
 
   <body>
+
     <h1>世界の天気予報</h1>
-    <p><label for="kuni">検索したい国名</label>
-      <input type="radio" name="kunimei" id="kuni1" value="360630">
+     <h4><label for="kuni">検索したい都市名</label></h4>
+     <p class="target"><input type="radio" name="kunimei" id="kuni1" value="360630">
       <label for="kuni1">カイロ</label>
       <input type="radio" name="kunimei" id="kuni2" value="524901">
       <label for="kuni1">モスクワ</label>
@@ -33,13 +35,14 @@
       <input type="radio" name="kunimei" id="kuni2" value="5128581">
       <label for="kuni1">ニューヨーク</label>
       <input type="radio" name="kunimei" id="kuni2" value="5368361">
-      <label for="kuni1">ロサンゼルス</label>
+      <label for="kuni1">ロサンゼルス</label></p>
 
-      <p><button id="answer">検索する</button></p>
+      <p class="kendaku"><button id="answer">検索する</button></p>
 
-      <p><span id= "t"></span></p>
-      <p><span id= "f"></span></p>
-      <p><span id= "j"></span></p>
+      <p><span id= "City"></span></p>
+      <p><span id= "Weather"></span></p>
+      <p><span id= "MAX"></span></p>
+      <p><span id= "MIN"></span></p>
   </body>
 </html>
 

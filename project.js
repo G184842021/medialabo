@@ -8,11 +8,11 @@ function printAnswer() {
     for (let r of rs) {
         if (r.checked) {        // r が選択されていたら
             console.log(r.value);
-			
+			id = r.value;
         }
     }
-        // ユーザが記入した文字列
-		id = rs.value;
+
+    // ユーザが記入した文字列
 	// URL を設定
 	let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+ id +'.json';
 
@@ -29,13 +29,18 @@ function showResult(resp) {
 	if (typeof data === 'string') {
 		data = JSON.parse(data);
 	}
-    let aa = document.querySelector('span#t');
-    let bb = document.querySelector('span#f');
-    let cc = document.querySelector('span#j');
+    let aa = document.querySelector('span#City');
+    let bb = document.querySelector('span#Weather');
+    let cc = document.querySelector('span#MAX');
+    let dd = document.querySelector('span#MIN');
     console.log(data);
-    aa.textContent = ("都市名 : "+data.name);
-    bb.textContent = ("最高気温 : "+data.main.temp_max);
-    cc.textContent = ("最低気温 : "+data.main.temp_min);
+    let p = document.createElement('p');
+    p.textContent = data.weather.description;
+    aa.textContent = ("都市名 : " + data.name);
+    bb.textContent = ("天気 : " + data.weather.description);
+    cc.textContent = ("最高気温 : " + data.main.temp_max);
+    dd.textContent = ("最低気温 : " + data.main.temp_min);
+    
 }
 
 function showError(err) {
